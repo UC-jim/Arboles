@@ -6,7 +6,7 @@ class Nodo:
 
 
 def insertar(raiz, valor):
-    """Inserta un valor en el árbol binario de búsqueda."""
+    """Inserta un valor en el árbol binario de búsqueda ."""
     if raiz is None:
         return Nodo(valor)
 
