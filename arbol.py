@@ -54,7 +54,12 @@ def preorden(raiz):
 
 def postorden(raiz):
     "implementar recorrido postorden (izquierda, derecha, raíz)."
-
+    if raiz is None:
+        return
+    
+    postorden(raiz.izq)
+    postorden(raiz.der)
+    print(raiz.valor, end=" ")
 
 
 if __name__ == "__main__":
@@ -92,12 +97,12 @@ if __name__ == "__main__":
         elif opcion == "3":
             print("Recorrido preorden:")
             preorden(raiz)
-            print(" esta opción funcionará cuando implementes preorden")
+            print()
 
         elif opcion == "4":
             print("Recorrido postorden:")
             postorden(raiz)
-            print(" esta opción funcionará cuando implementes postorden")
+            print()
 
         elif opcion == "0":
             print("Saliendo del programa...")
