@@ -42,7 +42,13 @@ def inorden(raiz):
 
 
 def preorden(raiz):
-    "implementar recorrido preorden (raíz, izquierda, derecha)."
+    "Implementar recorrido preorden (raíz, izquierda, derecha)."
+    if raiz is None:
+        return
+    
+    print(raiz.valor, end=" ")
+    preorden(raiz.izq)
+    preorden(raiz.der)
 
 
 
